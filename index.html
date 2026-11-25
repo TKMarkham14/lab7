@@ -55,7 +55,7 @@
 				}
 				.legendCircle {
 					border-radius: 50%;
-					border: 2px solid #501e65;
+					border: 2px solid #4A6871;
 					background: rgba(80, 30, 101, .5);
 					display: inline-block;
 				}
@@ -168,7 +168,7 @@
 		}
 
 		function createPlayButton(timestamps) {
-		  var speed = 500;   // time between steps in milliseconds (1000 = 1 second)
+		  var speed = 1000;   // time between steps in milliseconds (1000 = 1 second)
 							  // use a smaller number to play faster
 		  var timer = null;   // holds the running animation; null means it is not playing
 
@@ -268,18 +268,18 @@
 					  // To alter this, the pointToLayer function needs to be used
 					  pointToLayer: function(feature, latlng) {
 						  return L.circleMarker(latlng, { // we use circle marker for the points
-							  fillColor: "#501e65",  // fill color of the circles
-							  color: '#501e65',      // border color of the circles
+							  fillColor: "#4A6871",  // fill color of the circles
+							  color: '#4A6871',      // border color of the circles
 							  weight: 2,             // circle line weight in pixels
 							  fillOpacity: 0.5       // fill opacity (0-1)
 						  }).on({
 								mouseover: function(e) {
 									this.openPopup();
-									this.setStyle({fillColor: 'green'});  // fill color turns green when mouseover
+									this.setStyle({fillColor: 'purple'});  // fill color turns green when mouseover
 								},
 								mouseout: function(e) {
 									this.closePopup();
-									this.setStyle({fillColor: '#501e65'});  // fill turns original color when mouseout
+									this.setStyle({fillColor: '#4A6871'});  // fill turns original color when mouseout
 								}
 						});
 					  }
